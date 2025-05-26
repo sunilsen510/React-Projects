@@ -325,7 +325,7 @@ const Header = () => {
         </nav>
 
         {/* Desktop Icons */}
-        <div className="hidden sm:flex items-center gap-4 text-gray-700 text-xl">
+        <div className="hidden sm:flex items-center gap-4 text-gray-700 text-xl listshowing">
           <button
             className="hover:text-primary transition"
             onClick={() => setIsModalOpen(true)}
