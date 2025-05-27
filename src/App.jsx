@@ -5,6 +5,8 @@ import HomePage from './Pages/HomePage';
 import ContactPage from './Pages/ContactPage';
 import './App.css'
 import AboutPage from './Pages/AboutPage';
+import BlogListPage from './Pages/BlogListPage';
+import BlogDetailsPage from './Pages/BlogDetailsPage';
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
          <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
+            <Route path="/blogs" element={<BlogListPage />} />
+            <Route path="/blogs/:id" element={<BlogDetailsPage />} />
             <Route path='/contact' element={<ContactPage />} />
          </Routes>
          <Footer />
