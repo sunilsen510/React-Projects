@@ -26,6 +26,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    debugger: true,
+    returnObjects: true,
     fallbackLng: 'en',
     supportedLngs: ['en', 'hi', 'cn', 'de', 'es', 'fr', 'pt', 'ar', 'ru', 'ja'],
     detection: {

@@ -174,95 +174,94 @@
 // export default Header;
 
 
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logoImg from "../assets/logo.svg";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { FiSearch, FiUser, FiHeart, FiShoppingBag } from "react-icons/fi";
 import SearchModal from "./SearchModal";
-import { useTranslation } from 'react-i18next';
-import LangSwitcher from "./LangSwitcher";
-
-
-
-const menuItems = [
-  {
-    title: "Home",
-    path: "/",
-  },
-  {
-    title: "Shop",
-    submenuItems: [
-      { label: "About Navo", path: "/about" },
-      { label: "Navo Identity", path: "/identity" },
-      { label: "FAQs", path: "/faq" },
-      { label: "Warrenty Policy", path: "/warrenty" },
-      { label: "Terms & Conditions", path: "/terms" },
-      { label: "Privacy Policy", path: "/policy" },
-    ],
-  },
-  {
-    title: "Information",
-    submenuItems: [
-      { label: "About Navo", path: "/about" },
-      { label: "Navo Identity", path: "/identity" },
-      { label: "FAQs", path: "/faq" },
-      { label: "Warrenty Policy", path: "/warrenty" },
-      { label: "Terms & Conditions", path: "/terms" },
-      { label: "Privacy Policy", path: "/policy" },
-    ],
-  },
-  {
-    title: "Help Center",
-    submenuItems: [
-      { label: "About Navo", path: "/about" },
-      { label: "Navo Identity", path: "/identity" },
-      { label: "FAQs", path: "/faq" },
-      { label: "Warrenty Policy", path: "/warrenty" },
-      { label: "Terms & Conditions", path: "/terms" },
-      { label: "Privacy Policy", path: "/policy" },
-    ],
-  },
-  {
-    title: "Blog",
-    submenuItems: [
-      { label: "About Navo", path: "/about" },
-      { label: "Navo Identity", path: "/identity" },
-      { label: "FAQs", path: "/faq" },
-      { label: "Warrenty Policy", path: "/warrenty" },
-      { label: "Terms & Conditions", path: "/terms" },
-      { label: "Privacy Policy", path: "/policy" },
-    ],
-  },
-  {
-    title: "Learn Ergonomics",
-    submenuItems: [
-      { label: "About Navo", path: "/about" },
-      { label: "Navo Identity", path: "/identity" },
-      { label: "FAQs", path: "/faq" },
-      { label: "Warrenty Policy", path: "/warrenty" },
-      { label: "Terms & Conditions", path: "/terms" },
-      { label: "Privacy Policy", path: "/policy" },
-    ],
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-];
+import { useTranslation } from "react-i18next";
+import LangSwitcher from "../Components/LangSwitcher";
 
 const Header = () => {
   const [openMenuItems, setOpenMenuItems] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+  const { t } = useTranslation();
 
   const handleToggle = (index) => {
     setOpenMenuItems((prev) => (prev === index ? null : index));
   };
 
-  const { t } = useTranslation();
+  const menuItems = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Shop",
+      submenuItems: [
+      { label: "About", path: "/about" },
+      { label: "Identity", path: "/identity" },
+      { label: "Faqs", path: "/faq" },
+      { label: "Warranty Policy", path: "/warranty" },
+      { label: "Terms & Conditions", path: "/terms" },
+      { label: "Privacy Policy", path: "/policy" },
+    ],
+    },
+    {
+      title: "Information",
+      submenuItems: [
+      { label: "About", path: "/about" },
+      { label: "Identity", path: "/identity" },
+      { label: "Faqs", path: "/faq" },
+      { label: "Warranty Policy", path: "/warranty" },
+      { label: "Terms & Conditions", path: "/terms" },
+      { label: "Privacy Policy", path: "/policy" },
+    ],
+    },
+    {
+      title: "Help Center",
+      submenuItems: [
+      { label: "About", path: "/about" },
+      { label: "Identity", path: "/identity" },
+      { label: "Faqs", path: "/faq" },
+      { label: "Warranty Policy", path: "/warranty" },
+      { label: "Terms & Conditions", path: "/terms" },
+      { label: "Privacy Policy", path: "/policy" },
+    ],
+    },
+    {
+      title: "Blog",
+      submenuItems: [
+      { label: "About", path: "/about" },
+      { label: "Identity", path: "/identity" },
+      { label: "Faqs", path: "/faq" },
+      { label: "Warranty Policy", path: "/warranty" },
+      { label: "Terms & Conditions", path: "/terms" },
+      { label: "Privacy Policy", path: "/policy" },
+    ],
+    },
+    {
+      title: "Learn Ergonomics",
+      submenuItems: [
+      { label: "About", path: "/about" },
+      { label: "Identity", path: "/identity" },
+      { label: "Faqs", path: "/faq" },
+      { label: "Warranty Policy", path: "/warranty" },
+      { label: "Terms & Conditions", path: "/terms" },
+      { label: "Privacy Policy", path: "/policy" },
+    ],
+    },
+    {
+      title: "Contact",
+      path: "/contact",
+    },
+  ];
+
+  console.log(menuItems,"menuItems");
+  
+ 
 
   return (
     <header className="sticky top-0 z-50 bg-transparent py-4">
@@ -275,7 +274,7 @@ const Header = () => {
           {menuItems.map((item, index) => (
             <div
               key={index}
-              className="group"
+              className="group text-lg"
               onMouseLeave={() => setOpenMenuItems(null)}
             >
               {item.submenuItems ? (
@@ -284,7 +283,7 @@ const Header = () => {
                     className="cursor-pointer text-gray-700 hover:text-primary flex items-center gap-1"
                     onMouseEnter={() => setOpenMenuItems(index)}
                   >
-                    {item.title}
+                   {t(item.title)}
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${
                         openMenuItems === index ? "rotate-90" : ""
@@ -307,12 +306,15 @@ const Header = () => {
                     }
                   >
                     {item.submenuItems.map((subItem, subIndex) => (
+                      
                       <li key={subIndex}>
                         <NavLink
                           to={subItem.path}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          className="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100"
                         >
-                          {subItem.label}
+                          {/* {t(subItem.label)} */}
+                          {t(`submenuItems.${item.title}.${subItem.label}`)}
+                          {/* {console.log(subItem,"subItem")}  */}
                         </NavLink>
                       </li>
                     ))}
@@ -323,7 +325,7 @@ const Header = () => {
                   to={item.path}
                   className="text-gray-800 hover:text-primary transition"
                 >
-                  {item.title}
+                  {t(item.title)}
                 </NavLink>
               )}
             </div>
@@ -394,7 +396,7 @@ const Header = () => {
                               onClick={() => setMobileOpen(false)}
                               className="block px-6 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
-                              {subItem.label}
+                               {t(subItem.label)}
                             </NavLink>
                           </li>
                         ))}
@@ -407,7 +409,7 @@ const Header = () => {
                     onClick={() => setMobileOpen(false)}
                     className="block px-4 py-3 text-gray-800 hover:bg-gray-100"
                   >
-                    {item.title}
+                    {t(item.title)}
                   </NavLink>
                 )}
               </div>

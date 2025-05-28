@@ -1,9 +1,74 @@
 {
-  "welcome": "私たちのサイトへようこそ！",
-  "contact": "お問い合わせください。",
+  "Home": "ホーム",
+  "Shop": "ショップ",
+  "Information": "情報",
+  "Help Center": "ヘルプセンター",
+  "Blog": "ブログ",
+  "Learn Ergonomics": "エルゴノミクスを学ぶ",
+  "Contact": "お問い合わせ",
+  "submenuItems": {
+    "Shop": {
+      "About": "私たちについて",
+      "Identity": "NAVOのアイデンティティ",
+      "Faqs": "よくある質問",
+      "Warranty Policy": "保証ポリシー",
+      "Terms & Conditions": "利用規約",
+      "Privacy Policy": "プライバシーポリシー"
+    },
+    "Information": {
+      "About": "私たちについて",
+      "Identity": "NAVOのアイデンティティ",
+      "Faqs": "よくある質問",
+      "Warranty Policy": "保証ポリシー",
+      "Terms & Conditions": "利用規約",
+      "Privacy Policy": "プライバシーポリシー"
+    },
+    "Help Center": {
+      "About": "私たちについて",
+      "Identity": "NAVOのアイデンティティ",
+      "Faqs": "よくある質問",
+      "Warranty Policy": "保証ポリシー",
+      "Terms & Conditions": "利用規約",
+      "Privacy Policy": "プライバシーポリシー"
+    },
+    "Blog": {
+      "About": "私たちについて",
+      "Identity": "NAVOのアイデンティティ",
+      "Faqs": "よくある質問",
+      "Warranty Policy": "保証ポリシー",
+      "Terms & Conditions": "利用規約",
+      "Privacy Policy": "プライバシーポリシー"
+    },
+    "Learn Ergonomics": {
+      "About": "私たちについて",
+      "Identity": "NAVOのアイデンティティ",
+      "Faqs": "よくある質問",
+      "Warranty Policy": "保証ポリシー",
+      "Terms & Conditions": "利用規約",
+      "Privacy Policy": "プライバシーポリシー"
+    }
+  },
+  "allCategories": "すべてのカテゴリー",
+  "categories": {
+    "sale": "セール",
+    "standingDesks": "スタンディングデスク",
+    "workStations": "ワークステーション",
+    "officeChairs": "オフィスチェア",
+    "gamingChairs": "ゲーミングチェア",
+    "gamingDesks": "ゲーミングデスク",
+    "monitorArms": "モニターアーム",
+    "laptopMonitors": "ノートパソコン＆モニター",
+    "accessories": "アクセサリー",
+    "standingDeskFrames": "スタンディングデスクフレーム",
+    "chairsStools": "椅子＆スツール",
+    "tables": "テーブル",
+    "storageOrganisers": "収納＆オーガナイザー"
+  },
   "aboutTitle": "私たちについて",
-  "aboutParagraph1": "快適さと革新が出会うスマートワークスペースへようこそ。私たちの使命は、人間工学に基づいた技術統合型家具で生産性を高めることです。",
-  "aboutParagraph2": "自宅勤務でもモダンなオフィス管理でも、私たちの調整可能なデスクとアクセサリーは健康、集中力、スタイルをサポートします。",
-  "aboutParagraph3": "ニーズに適応し、日々の仕事のスタイルを向上させる幅広いスマート製品を探索してください。",
+  "aboutParagraph1": "革新と快適さが融合するスマートワークスペースプラットフォームへようこそ。私たちの目標は、人間工学とテクノロジーを融合した家具で生産性を高めることです。",
+  "aboutParagraph2": "在宅勤務でもモダンなオフィスでも、調整可能なデスクとアクセサリーが健康、集中力、スタイルをサポートします。",
+  "aboutParagraph3": "あなたのニーズに合わせて適応し、毎日の仕事の仕方を向上させる幅広いスマート製品を探索してください。",
+  "aboutParagraph4": "NAVOはエルゴノミクスを再定義するライフスタイルブランドです。私たちは単なる製品販売ではありません。快適で自信を持って取り組めるエルゴノミクスの旅をサポートする信頼できるパートナーです。私たちの目標は、生活のあらゆる面にエルゴノミクスを統合し、より健康的で充実したライフスタイルを促進することです。この変革の旅に参加してください。専門知識とアクセスのしやすさがNAVOをエルゴノミクス生活のリーダーにしています。",
+  "aboutParagraph5": "NAVOはもともとNAVODESKとして2019年にサイム・ダムディによって設立されました。数年のうちに成長し、2023年にNAVOとして再ブランド化され、オフィス家具を超えた新たなエルゴノミクスの時代の幕開けとなりました。今日、NAVOはすべてのエルゴノミクスニーズに対する究極の目的地です。オフィス家具、在宅勤務用家具、エルゴノミクスアクセサリー、革新的な空間最適化ソリューションをお探しなら、NAVOが最適な選択です。",
   "readMore": "もっと読む"
 }

@@ -1,9 +1,100 @@
 {
-  "welcome": "Welcome to our site!",
-  "contact": "Get in touch with us.",
+  "Home": "Home",
+  "Shop": "Shop",
+  "Information": "Information",
+  "Help Center": "Help Center",
+  "Blog": "Blog",
+  "Learn Ergonomics": "Learn Ergonomics",
+  "Contact": "Contact",
+  "submenuItems": {
+    "Shop": {
+      "About": "About Us",
+      "Identity": "NAVO's Identity",
+      "Faqs": "FAQs",
+      "Warranty Policy": "Warranty Policy",
+      "Terms & Conditions": "Terms & Conditions",
+      "Privacy Policy": "Privacy Policy"
+    },
+    "Information": {
+      "About": "About Us",
+      "Identity": "NAVO's Identity",
+      "Faqs": "FAQs",
+      "Warranty Policy": "Warranty Policy",
+      "Terms & Conditions": "Terms & Conditions",
+      "Privacy Policy": "Privacy Policy"
+    },
+    "Help Center": {
+      "About": "About Us",
+      "Identity": "NAVO's Identity",
+      "Faqs": "FAQs",
+      "Warranty Policy": "Warranty Policy",
+      "Terms & Conditions": "Terms & Conditions",
+      "Privacy Policy": "Privacy Policy"
+    },
+    "Blog": {
+      "About": "About Us",
+      "Identity": "NAVO's Identity",
+      "Faqs": "FAQs",
+      "Warranty Policy": "Warranty Policy",
+      "Terms & Conditions": "Terms & Conditions",
+      "Privacy Policy": "Privacy Policy"
+    },
+    "Learn Ergonomics": {
+      "About": "About Us",
+      "Identity": "NAVO's Identity",
+      "Faqs": "FAQs",
+      "Warranty Policy": "Warranty Policy",
+      "Terms & Conditions": "Terms & Conditions",
+      "Privacy Policy": "Privacy Policy"
+    },
+  "allCategories": "All Categories",
+  "categories": {
+    "sale": "Sale",
+    "standingDesks": "Standing Desks",
+    "workStations": "WorkStations",
+    "officeChairs": "Office Chairs",
+    "gamingChairs": "Gaming Chairs",
+    "gamingDesks": "Gaming Desks",
+    "monitorArms": "Monitor Arms",
+    "laptopMonitors": "Laptop & Monitors..",
+    "accessories": "Accessories",
+    "standingDeskFrames": "Standing Desk Frames..",
+    "chairsStools": "Chairs & Stools",
+    "tables": "Tables",
+    "storageOrganisers": "Storage & Organisers"
+  }
+  },
   "aboutTitle": "About Us",
-  "aboutParagraph1": "Welcome to our smart workspace platform where innovation meets comfort. Our mission is to empower productivity through ergonomic and technology-integrated furniture.",
-  "aboutParagraph2": "Whether you're working from home or managing a modern office environment, our adjustable desks and accessories are designed to support your health, focus, and style.",
-  "aboutParagraph3": "Explore a wide range of intelligent products that adapt to your needs and upgrade the way you work—every day.",
-  "readMore": "Read More"
+  "aboutParagraph1": "Welcome to our smart workspace platform, where innovation meets comfort. Our goal is to enhance productivity through ergonomic and technology-integrated furniture.",
+  "aboutParagraph2": "Whether you work from home or run a modern office, our adjustable desks and accessories support your health, focus, and style.",
+  "aboutParagraph3": "Explore a wide range of smart products that adapt to your needs and improve the way you work every day.",
+  "aboutParagraph4": "NAVO is a lifestyle brand redefining ergonomics. We don't just sell products. We are your trusted companion in your ergonomic journey, offering guidance and expertise with ease and confidence. Our goal is to promote a healthier and more fulfilling lifestyle by integrating ergonomics into every aspect of life. Join us on this transformative journey, where expertise and accessibility make NAVO a leader in ergonomic living.",
+  "aboutParagraph5": "NAVO, originally known as NAVODESK, was founded by Saim Damudi in 2019. Within just a few years, we grew and rebranded as NAVO in 2023, marking the beginning of a new era in ergonomics where our vision expanded beyond office furniture. Today, NAVO is your ultimate destination for all ergonomic needs. Whether you are looking for office furniture, work-from-home furniture, ergonomic accessories, or innovative space optimization solutions, NAVO is your first choice.",
+  "readMore": "Read More",
+  "footer": {
+      "toplinks": [
+          {
+              "title": "Information",
+              "links": ["About Navo", "Navo Identity", "Terms & Conditions", "Privacy Policy"]
+          },
+          {
+              "title": "Shop Online",
+              "links": ["On Sale", "Standing Desk Frames", "Office Chairs", "Monitor Arms", "Accessories", "Gaming", "See All Categories"]
+          },
+          {
+              "title": "Help Center",
+              "links": ["Downloads", "FAQs", "Troubleshoot", "Tutorials", "Contact"]
+          },
+          {
+              "title": "Ergonomics",
+              "links": ["What is Ergonomics?", "Blog"]
+          },
+          {
+              "title": "Get In Touch",
+              "links": ["Let’s Collaborate", "Become a Reseller", "Contact Us"]
+          }
+      ],
+      "copyright": "All Rights Reserved",
+      "ergonomised": "Your World Ergonomised"
+  }
 }

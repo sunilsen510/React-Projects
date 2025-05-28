@@ -1,9 +1,74 @@
 {
-  "welcome": "¡Bienvenido a nuestro sitio!",
-  "contact": "Contáctanos.",
-  "aboutTitle": "Sobre nosotros",
-  "aboutParagraph1": "Bienvenido a nuestra plataforma de espacio de trabajo inteligente donde la innovación se une al confort. Nuestra misión es impulsar la productividad mediante muebles ergonómicos e integrados con tecnología.",
-  "aboutParagraph2": "Ya sea que trabajes desde casa o administres una oficina moderna, nuestros escritorios ajustables y accesorios están diseñados para apoyar tu salud, concentración y estilo.",
-  "aboutParagraph3": "Explora una amplia gama de productos inteligentes que se adaptan a tus necesidades y mejoran tu forma de trabajar cada día.",
-  "readMore": "Leer más"
+  "Home": "Inicio",
+  "Shop": "Tienda",
+  "Information": "Información",
+  "Help Center": "Centro de Ayuda",
+  "Blog": "Blog",
+  "Learn Ergonomics": "Aprender Ergonomía",
+  "Contact": "Contacto",
+  "submenuItems": {
+    "Shop": {
+      "About": "Sobre Nosotros",
+      "Identity": "Identidad de NAVO",
+      "Faqs": "Preguntas Frecuentes",
+      "Warranty Policy": "Política de Garantía",
+      "Terms & Conditions": "Términos y Condiciones",
+      "Privacy Policy": "Política de Privacidad"
+    },
+    "Information": {
+      "About": "Sobre Nosotros",
+      "Identity": "Identidad de NAVO",
+      "Faqs": "Preguntas Frecuentes",
+      "Warranty Policy": "Política de Garantía",
+      "Terms & Conditions": "Términos y Condiciones",
+      "Privacy Policy": "Política de Privacidad"
+    },
+    "Help Center": {
+      "About": "Sobre Nosotros",
+      "Identity": "Identidad de NAVO",
+      "Faqs": "Preguntas Frecuentes",
+      "Warranty Policy": "Política de Garantía",
+      "Terms & Conditions": "Términos y Condiciones",
+      "Privacy Policy": "Política de Privacidad"
+    },
+    "Blog": {
+      "About": "Sobre Nosotros",
+      "Identity": "Identidad de NAVO",
+      "Faqs": "Preguntas Frecuentes",
+      "Warranty Policy": "Política de Garantía",
+      "Terms & Conditions": "Términos y Condiciones",
+      "Privacy Policy": "Política de Privacidad"
+    },
+    "Learn Ergonomics": {
+      "About": "Sobre Nosotros",
+      "Identity": "Identidad de NAVO",
+      "Faqs": "Preguntas Frecuentes",
+      "Warranty Policy": "Política de Garantía",
+      "Terms & Conditions": "Términos y Condiciones",
+      "Privacy Policy": "Política de Privacidad"
+    }
+  },
+  "allCategories": "Todas las Categorías",
+  "categories": {
+    "sale": "Oferta",
+    "standingDesks": "Escritorios de Pie",
+    "workStations": "Estaciones de Trabajo",
+    "officeChairs": "Sillas de Oficina",
+    "gamingChairs": "Sillas para Juegos",
+    "gamingDesks": "Escritorios para Juegos",
+    "monitorArms": "Soportes para Monitor",
+    "laptopMonitors": "Portátiles y Monitores",
+    "accessories": "Accesorios",
+    "standingDeskFrames": "Estructuras para Escritorios de Pie",
+    "chairsStools": "Sillas y Taburetes",
+    "tables": "Mesas",
+    "storageOrganisers": "Almacenamiento y Organizadores"
+  },
+  "aboutTitle": "Sobre Nosotros",
+  "aboutParagraph1": "Bienvenido a nuestra plataforma de espacios de trabajo inteligentes, donde la innovación se encuentra con la comodidad. Nuestro objetivo es mejorar la productividad a través de muebles ergonómicos integrados con tecnología.",
+  "aboutParagraph2": "Ya sea que trabajes desde casa o dirijas una oficina moderna, nuestros escritorios ajustables y accesorios apoyan tu salud, concentración y estilo.",
+  "aboutParagraph3": "Explora una amplia gama de productos inteligentes que se adaptan a tus necesidades y mejoran la forma en que trabajas cada día.",
+  "aboutParagraph4": "NAVO es una marca de estilo de vida que redefine la ergonomía. No solo vendemos productos. Somos tu compañero de confianza en tu viaje ergonómico, ofreciendo orientación y experiencia con facilidad y confianza. Nuestro objetivo es promover un estilo de vida más saludable y satisfactorio integrando la ergonomía en cada aspecto de la vida. Únete a nosotros en este viaje transformador, donde la experiencia y accesibilidad hacen de NAVO un líder en vida ergonómica.",
+  "aboutParagraph5": "NAVO, originalmente conocida como NAVODESK, fue fundada por Saim Damudi en 2019. En solo unos años, crecimos y nos renombramos como NAVO en 2023, marcando el comienzo de una nueva era en la ergonomía donde nuestra visión se expandió más allá del mobiliario de oficina. Hoy, NAVO es tu destino final para todas las necesidades ergonómicas. Ya sea que busques muebles de oficina, muebles para trabajar desde casa, accesorios ergonómicos o soluciones innovadoras para optimizar espacios, NAVO es tu primera opción.",
+  "readMore": "Leer Más"
 }

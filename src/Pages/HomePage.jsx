@@ -70,22 +70,18 @@ const HomePage = () => {
   return (
     <>
       <NewsTicker />
-      <div className="text-center mt-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">{t('welcome')}</h1>
-        <p className="text-gray-600">{t('contact')}</p>
-      </div>
       <section className="bg-gray-100 py-16">
         <div className="mx-auto px-4 max-w-[80%] xl:max-w-[80%] md:max-w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-4 text-gray-800">
             <h2 className="text-3xl md:text-4xl font-bold">{t('aboutTitle')}</h2>
 
-            <p>{t('aboutParagraph1')}</p>
-            <p>{t('aboutParagraph2')}</p>
-            <p>{t('aboutParagraph3')}</p>
+            <p className='text-lg'>{t('aboutParagraph1')}</p>
+            <p className='text-lg'>{t('aboutParagraph2')}</p>
+            <p className='text-lg'>{t('aboutParagraph3')}</p>
 
             <Link
               to="/blogs"
-              className="text-gray-800 mt-[20px] border-1 rounded-3xl hover:bg-gray-800 transition-all hover:text-white py-[10px] px-4 inline-block"
+              className="text-gray-800 text-lg mt-[20px] border-1 rounded-3xl hover:bg-gray-800 transition-all hover:text-white py-[10px] px-4 inline-block"
             >
               {t('readMore')} →
             </Link>
