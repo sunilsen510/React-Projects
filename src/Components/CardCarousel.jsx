@@ -5,7 +5,6 @@ import AdidasLogo from "../../public/assets/brands/sanity.svg";
 import AsanaLogo from "../../public/assets/brands/upwork.svg";
 import GithubLogo from "../../public/assets/brands/docker.svg";
 import GoogleLogo from "../../public/assets/brands/refs.svg";
-import NotionLogo from "../../public/assets/brands/cloudflare.svg";
 import AtlassianLogo from "../../public/assets/brands/zoom.svg";
 import MailchimpLogo from "../../public/assets/brands/wordpress.svg";
 import ShopifyLogo from "../../public/assets/brands/shopify.svg";
@@ -16,7 +15,6 @@ const brandImg = [
   AsanaLogo,
   GithubLogo,
   GoogleLogo,
-  NotionLogo,
   AtlassianLogo,
   MailchimpLogo,
   ShopifyLogo,

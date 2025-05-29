@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const BlogDetail = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)

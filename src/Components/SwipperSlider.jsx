@@ -396,49 +396,52 @@
 
 import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import sofaImg from '../assets/sofa.jpg' // Replace with your correct image path
+import sofaImg from '../assets/sofa.jpg';
+import { useTranslation } from 'react-i18next'; 
 
 const EmblaCarousel = ({ options }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const { t } = useTranslation();
 
   const mainCards = [
-    {
-      title: 'Arne Dining Chair',
-      desc: 'The small round table in the dinette may be great for casual meals with your family.',
-      imgUrl: sofaImg,
-      price: '$350.00'
-    },
-    {
-      title: 'Luxury Sofa',
-      desc: 'Perfect comfort meets beautiful design in this elegant piece.',
-      imgUrl: sofaImg,
-      price: '$450.00'
-    },
-    {
-      title: 'Wooden Table',
-      desc: 'Made from premium oak wood, a centerpiece of any room.',
-      imgUrl: sofaImg,
-      price: '$500.00'
-    },
-    {
-      title: 'Minimalist Lamp',
-      desc: 'Brighten your space with sleek modern lighting.',
-      imgUrl: sofaImg,
-      price: '$120.00'
-    },
-    {
-      title: 'Office Chair',
-      desc: 'Ergonomic and stylish for your workspace.',
-      imgUrl: sofaImg,
-      price: '$280.00'
-    },
-    {
-      title: 'Bookshelf Rack',
-      desc: 'Organize your books with this modern storage solution.',
-      imgUrl: sofaImg,
-      price: '$180.00'
-    },
-  ]
+  {
+    title: t('cards.title1'),
+    desc: t('cards.description1'),
+    price: t('cards.price1'),
+    imgUrl: sofaImg
+  },
+  {
+    title: t('cards.title2'),
+    desc: t('cards.description2'),
+    price: t('cards.price2'),
+    imgUrl: sofaImg
+  },
+  {
+    title: t('cards.title3'),
+    desc: t('cards.description3'),
+    price: t('cards.price3'),
+    imgUrl: sofaImg
+  },
+  {
+    title: t('cards.title4'),
+    desc: t('cards.description4'),
+    price: t('cards.price4'),
+    imgUrl: sofaImg
+  },
+  {
+    title: t('cards.title5'),
+    desc: t('cards.description5'),
+    price: t('cards.price5'),
+    imgUrl: sofaImg
+  },
+  {
+    title: t('cards.title6'),
+    desc: t('cards.description6'),
+    price: t('cards.price6'),
+    imgUrl: sofaImg
+  }
+]
+
 
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)

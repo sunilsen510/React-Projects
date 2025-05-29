@@ -64,11 +64,78 @@
     "tables": "Mesas",
     "storageOrganisers": "Almacenamiento y Organizadores"
   },
+  "footer": {
+    "toplinks": [
+      {
+        "title": "Información",
+        "links": ["Sobre Navo", "Identidad de Navo", "Términos y condiciones", "Política de privacidad"]
+      },
+      {
+        "title": "Compra en línea",
+        "links": ["En oferta", "Estructuras de escritorios ajustables", "Sillas de oficina", "Brazos para monitores", "Accesorios", "Gaming", "Ver todas las categorías"]
+      },
+      {
+        "title": "Centro de ayuda",
+        "links": ["Descargas", "Preguntas frecuentes", "Solución de problemas", "Tutoriales", "Contáctanos"]
+      },
+      {
+        "title": "Ergonomía",
+        "links": ["¿Qué es la ergonomía?", "Blog"]
+      },
+      {
+        "title": "Contáctanos",
+        "links": ["Colaboremos", "Conviértete en distribuidor", "Contáctanos"]
+      }
+    ],
+    "copyright": "Todos los derechos reservados",
+    "ergonomised": "Tu mundo ergonómico"
+  },
   "aboutTitle": "Sobre Nosotros",
   "aboutParagraph1": "Bienvenido a nuestra plataforma de espacios de trabajo inteligentes, donde la innovación se encuentra con la comodidad. Nuestro objetivo es mejorar la productividad a través de muebles ergonómicos integrados con tecnología.",
   "aboutParagraph2": "Ya sea que trabajes desde casa o dirijas una oficina moderna, nuestros escritorios ajustables y accesorios apoyan tu salud, concentración y estilo.",
   "aboutParagraph3": "Explora una amplia gama de productos inteligentes que se adaptan a tus necesidades y mejoran la forma en que trabajas cada día.",
   "aboutParagraph4": "NAVO es una marca de estilo de vida que redefine la ergonomía. No solo vendemos productos. Somos tu compañero de confianza en tu viaje ergonómico, ofreciendo orientación y experiencia con facilidad y confianza. Nuestro objetivo es promover un estilo de vida más saludable y satisfactorio integrando la ergonomía en cada aspecto de la vida. Únete a nosotros en este viaje transformador, donde la experiencia y accesibilidad hacen de NAVO un líder en vida ergonómica.",
   "aboutParagraph5": "NAVO, originalmente conocida como NAVODESK, fue fundada por Saim Damudi en 2019. En solo unos años, crecimos y nos renombramos como NAVO en 2023, marcando el comienzo de una nueva era en la ergonomía donde nuestra visión se expandió más allá del mobiliario de oficina. Hoy, NAVO es tu destino final para todas las necesidades ergonómicas. Ya sea que busques muebles de oficina, muebles para trabajar desde casa, accesorios ergonómicos o soluciones innovadoras para optimizar espacios, NAVO es tu primera opción.",
-  "readMore": "Leer Más"
+  "readMore": "Leer Más",
+  "contact": {
+  "title": "Contáctanos",
+  "subtitle": "Nuestro enfoque principal eres tú, el usuario. Todo nuestro enfoque gira en torno a comprender tus necesidades, preferencias y aspiraciones únicas.",
+  "form": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje"
+  },
+  "validation": {
+    "name": "Por favor, introduce tu nombre",
+    "email": "Por favor, introduce una dirección de correo válida",
+    "message": "El mensaje debe tener al menos 10 caracteres"
+  },
+  "submit": "Enviar",
+  "contactTitle": "Contáctanos",
+  "contactSent": "¡Mensaje enviado con éxito!",
+  "contactParagraph6": "Nuestro enfoque principal eres tú, el usuario. Todo nuestro enfoque gira en torno a comprender tus necesidades, preferencias y aspiraciones únicas."
+  },
+  "blogList": {
+    "title": "Publicaciones del blog"
+  },
+  "cards": {
+  "title1": "Silla de Comedor Arne",
+  "description1": "La pequeña mesa redonda en el comedor es ideal para comidas informales con tu familia.",
+  "price1": "$350.00",
+  "title2": "Sofá de Lujo",
+  "description2": "Comodidad perfecta y diseño hermoso en esta elegante pieza.",
+  "price2": "$450.00",
+  "title3": "Mesa de Madera",
+  "description3": "Hecha de madera de roble premium, el centro de atención en cualquier habitación.",
+  "price3": "$500.00",
+  "title4": "Lámpara Minimalista",
+  "description4": "Ilumina tu espacio con una luz moderna y elegante.",
+  "price4": "$120.00",
+  "title5": "Silla de Oficina",
+  "description5": "Ergonómica y con estilo para tu lugar de trabajo.",
+  "price5": "$280.00",
+  "title6": "Estantería",
+  "description6": "Organiza tus libros con esta solución de almacenamiento moderna.",
+  "price6": "$180.00"
+}
 }

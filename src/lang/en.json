@@ -46,7 +46,8 @@
       "Warranty Policy": "Warranty Policy",
       "Terms & Conditions": "Terms & Conditions",
       "Privacy Policy": "Privacy Policy"
-    },
+    }
+  },
   "allCategories": "All Categories",
   "categories": {
     "sale": "Sale",
@@ -62,7 +63,32 @@
     "chairsStools": "Chairs & Stools",
     "tables": "Tables",
     "storageOrganisers": "Storage & Organisers"
-  }
+  },
+  "footer": {
+    "toplinks": [
+      {
+        "title": "Information",
+        "links": ["About Navo", "Navo Identity", "Terms & Conditions", "Privacy Policy"]
+      },
+      {
+        "title": "Shop Online",
+        "links": ["On Sale", "Standing Desk Frames", "Office Chairs", "Monitor Arms", "Accessories", "Gaming", "See All Categories"]
+      },
+      {
+        "title": "Help Center",
+        "links": ["Downloads", "FAQs", "Troubleshoot", "Tutorials", "Contact"]
+      },
+      {
+        "title": "Ergonomics",
+        "links": ["What is Ergonomics?", "Blog"]
+      },
+      {
+        "title": "Get In Touch",
+        "links": ["Let’s Collaborate", "Become a Reseller", "Contact Us"]
+      }
+    ],
+    "copyright": "All Rights Reserved",
+    "ergonomised": "Your World Ergonomised"
   },
   "aboutTitle": "About Us",
   "aboutParagraph1": "Welcome to our smart workspace platform, where innovation meets comfort. Our goal is to enhance productivity through ergonomic and technology-integrated furniture.",
@@ -71,30 +97,46 @@
   "aboutParagraph4": "NAVO is a lifestyle brand redefining ergonomics. We don't just sell products. We are your trusted companion in your ergonomic journey, offering guidance and expertise with ease and confidence. Our goal is to promote a healthier and more fulfilling lifestyle by integrating ergonomics into every aspect of life. Join us on this transformative journey, where expertise and accessibility make NAVO a leader in ergonomic living.",
   "aboutParagraph5": "NAVO, originally known as NAVODESK, was founded by Saim Damudi in 2019. Within just a few years, we grew and rebranded as NAVO in 2023, marking the beginning of a new era in ergonomics where our vision expanded beyond office furniture. Today, NAVO is your ultimate destination for all ergonomic needs. Whether you are looking for office furniture, work-from-home furniture, ergonomic accessories, or innovative space optimization solutions, NAVO is your first choice.",
   "readMore": "Read More",
-  "footer": {
-      "toplinks": [
-          {
-              "title": "Information",
-              "links": ["About Navo", "Navo Identity", "Terms & Conditions", "Privacy Policy"]
-          },
-          {
-              "title": "Shop Online",
-              "links": ["On Sale", "Standing Desk Frames", "Office Chairs", "Monitor Arms", "Accessories", "Gaming", "See All Categories"]
-          },
-          {
-              "title": "Help Center",
-              "links": ["Downloads", "FAQs", "Troubleshoot", "Tutorials", "Contact"]
-          },
-          {
-              "title": "Ergonomics",
-              "links": ["What is Ergonomics?", "Blog"]
-          },
-          {
-              "title": "Get In Touch",
-              "links": ["Let’s Collaborate", "Become a Reseller", "Contact Us"]
-          }
-      ],
-      "copyright": "All Rights Reserved",
-      "ergonomised": "Your World Ergonomised"
-  }
+
+  "contact": {
+    "title": "Contact Us",
+    "subtitle" : "Our key focus is you, the user. Our entire approach revolves around understanding your unique needs, preferences, and aspirations!",
+    "form": {
+        "name": "Name",
+        "email": "Email Address",
+        "message": "Message"
+    },
+    "validation": {
+      "name": "Name is required",
+      "email": "Invalid email",
+      "message": "Message should be at least 10 characters"
+    },
+    "submit": "Submit",
+    "contactTitle": "Contact Us",
+    "contactSent": "Message sent successfully!",
+    "contactParagraph6": "Our key focus is you, the user. Our entire approach revolves around understanding your unique needs, preferences, and aspirations!"
+  },
+  "blogList": {
+    "title": "Blog Posts"
+  },
+  "cards": {
+  "title1": "Arne Dining Chair",
+  "description1": "The small round table in the dinette may be great for casual meals with your family.",
+  "price1": "$350.00",
+  "title2": "Luxury Sofa",
+  "description2": "Perfect comfort meets beautiful design in this elegant piece.",
+  "price2": "$450.00",
+  "title3": "Wooden Table",
+  "description3": "Made from premium oak wood, a centerpiece of any room.",
+  "price3": "$500.00",
+  "title4": "Minimalist Lamp",
+  "description4": "Brighten your space with sleek modern lighting.",
+  "price4": "$120.00",
+  "title5": "Office Chair",
+  "description5": "Ergonomic and stylish for your workspace.",
+  "price5": "$280.00",
+  "title6": "Bookshelf Rack",
+  "description6": "Organize your books with this modern storage solution.",
+  "price6": "$180.00"
+}
 }

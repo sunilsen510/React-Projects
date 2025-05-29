@@ -8,8 +8,8 @@ const ContactPage = () => {
     <>
       <section className="w-full h-auto bg-gray-100">
         <InnerHero
-          title="Contact Us"
-          subtitle="Our key focus is you, the user. Our entire approach revolves around understanding your unique needs, preferences, and aspirations!"
+          title="contact.title"
+          subtitle="contact.subtitle"
           backgroundImage={contactImg}
           titleColor="text-white"
           subtitleColor="text-white"

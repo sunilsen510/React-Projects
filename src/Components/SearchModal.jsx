@@ -412,11 +412,13 @@
 import { useRef, useEffect, useState } from 'react';
 import logoImg from "../assets/logo.svg";
 import { FiSearch } from "react-icons/fi";
+import { useTranslation } from 'react-i18next';
 
 const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
   const modalRef = useRef(null);
   const [searchValue, setSearchValue] = useState('');
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const searchItems = [
     "standing desk", "office chair", "gaming", "ergonomics", "sale", "workstations", "monitor arms", "laptop & monitors", "accessories", "tables", 
@@ -522,6 +524,25 @@ const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
               <li className="text-gray-400 mt-2 animate-fadeInUp">No results found</li>
             )}
           </ul>
+
+          {/* <ul className='space-y-2'>
+            {filteredTerms.length > 0 ? (
+              filteredTerms.map((term, index) => (
+                <li
+                  key={index}
+                  onClick={() => handlePopularClick(term)}
+                  className="text-black font-medium hover:text-gray-500 hover:font-semibold transition-all duration-500 ease-in-out cursor-pointer text-lg"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <span className='block hover:scale-105 transition-all duration-500 ease-in-out'>
+                    {highlightMatch(t(`searchModal.${term}`) || term, searchValue)}
+                  </span>
+                </li>
+              ))
+            ) : (
+              <li className="text-gray-400 mt-2 animate-fadeInUp">No results found</li>
+            )}
+          </ul> */}
         </div>
       </div>
     </div>
