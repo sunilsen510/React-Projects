@@ -91,7 +91,7 @@ const LangSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute z-20 mt-2 w-full bg-gray-300 border border-gray-500 rounded-md shadow-lg">
+        <div className="absolute z-20 mt-2 w-full bg-gray-300 border border-transparent rounded-md shadow-lg">
           {languages.map((lang) => (
             <button
               key={lang.code}

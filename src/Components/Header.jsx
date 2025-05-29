@@ -176,7 +176,7 @@
 
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logoImg from "../assets/logo.svg";
+import logoImg from "../assets/nlogo.svg";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { FiSearch, FiUser, FiHeart, FiShoppingBag } from "react-icons/fi";
 import SearchModal from "./SearchModal";
@@ -267,7 +267,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-transparent py-4">
       <div className="xl:max-w-[80%] md:max-w-full mx-auto relative flex items-center justify-between py-4 px-4 bg-white sm:shadow border-black rounded-2xl">
         {/* Logo */}
-        <img src={logoImg} alt="Logo" className="h-10 w-auto" />
+          <NavLink to={"/"}>
+            <img src={logoImg} alt="Logo" className="h-10 w-auto" />
+          </NavLink>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex gap-4 items-center justify-center w-full">
@@ -334,7 +336,7 @@ const Header = () => {
 
         {/* Desktop Icons */}
         <LangSwitcher />
-        <div className="hidden sm:flex items-center gap-4 text-gray-700 text-xl ml-4 listshowing">
+        <div className="hidden sm:flex items-center gap-4 text-gray-700 text-xl listshowing">
           <button
             className="hover:text-primary transition"
             onClick={() => setIsModalOpen(true)}

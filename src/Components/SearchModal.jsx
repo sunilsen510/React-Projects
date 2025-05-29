@@ -1,3 +1,4 @@
+
 // import {useRef, useEffect} from 'react'
 // import logoImg from "../assets/logo.svg";
 // import { FiSearch } from "react-icons/fi";
@@ -410,7 +411,7 @@
 
 
 import { useRef, useEffect, useState } from 'react';
-import logoImg from "../assets/logo.svg";
+import logoImg from "../assets/nlogo.svg";
 import { FiSearch } from "react-icons/fi";
 import { useTranslation } from 'react-i18next';
 
@@ -418,6 +419,7 @@ const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
   const modalRef = useRef(null);
   const [searchValue, setSearchValue] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslation();
 
   const searchItems = [
@@ -438,6 +440,12 @@ const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
       )
     );
   };
+
+  // Set modal open animation trigger
+  useEffect(() => {
+    if (isOpen) setIsModalOpen(true);
+    else setIsModalOpen(false);
+  }, [isOpen]);
 
   // Clear input when search bar closes
   useEffect(() => {
@@ -470,16 +478,20 @@ const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
     : searchItems;
 
   if (!isOpen) return null;
+ 
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-start bg-transparent bg-opacity-50 backdrop-blur-sm px-4 py-8 animate-fadeIn space-y-6">
+   <div className="fixed top-0 w-full z-[56] bg-transparent transition-all duration-700 ease-in-out inset-0  flex flex-col items-center justify-start px-4 py-8 space-y-6">
       <div
         ref={modalRef}
-        className="bg-white max-w-[80%] w-full rounded-2xl shadow-xl p-16"
+        className={`bg-white max-w-[80%] w-full rounded-2xl shadow-xl p-16
+          transform transition-all duration-700 ease-in-out 
+          ${isOpen ? 'opacity-100 pointer-events-auto visible animate-slideFadeIn' : 'opacity-0 pointer-events-none invisible'}
+        `}         
       >
         <div className="flex items-center justify-between space-x-4 mb-6">
           <img src={logoImg} alt="Logo" className="h-10 w-auto" />
-          <div className="flex-grow relative max-w-xl w-full">
+          <div className="flex-grow relative max-w-3xl w-full">
             <FiSearch className="absolute text-black left-4 top-0 bottom-0 my-auto text-xl" />
             <input
               type='search'
@@ -512,8 +524,13 @@ const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
                 <li
                   key={index}
                   onClick={() => handlePopularClick(term)}
-                  className="text-black font-medium hover:text-gray-500 hover:font-semibold transition-all duration-500 ease-in-out cursor-pointer text-lg"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className={`text-black font-medium hover:text-gray-500 hover:font-semibold transition-all duration-500 ease-in-out cursor-pointer text-lg
+                    ${isModalOpen ? 'opacity-100 animate-fadeInUp' : 'opacity-0'}
+                  `}
+                  style={{
+                    animationDelay: isModalOpen ? `${index * 100}ms` : '0ms',
+                    animationFillMode: 'forwards',
+                  }}
                 >
                   <span className='block hover:scale-105 transition-all duration-500 ease-in-out'>
                     {highlightMatch(term, searchValue)}

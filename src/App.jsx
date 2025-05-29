@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -9,6 +11,13 @@ import BlogListPage from './Pages/BlogListPage';
 import BlogDetailsPage from './Pages/BlogDetailsPage';
 
 function App() {
+  const { i18n } = useTranslation();
+
+    useEffect(() => {
+      const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = dir;
+      document.documentElement.lang = i18n.language;
+    }, [i18n.language]);
 
   return (
     <>
