@@ -54,8 +54,7 @@
 
 // export default HomePage;
 
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NewsTicker from '../Components/NewsTicker';
 import CardCarousel from '../Components/CardCarousel';
 import SwipperSlider from '../Components/SwipperSlider';
@@ -63,16 +62,21 @@ import sideImg from '../assets/innerHero.jpg';
 import InnerHero from '../Components/InnerHero';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Loader from '../Components/Loader';
+import useLoader from '../Hooks/useLoader';
 
 const HomePage = () => {
-  const { t } = useTranslation();
+ const { t } = useTranslation();
+ const loading = useLoader(1000); 
+
+  if (loading) return <Loader />;
 
   return (
     <>
       <NewsTicker />
       <section className="bg-gray-100 py-16">
-        <div className="mx-auto px-4 max-w-[80%] xl:max-w-[80%] md:max-w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-4 text-gray-800">
+       <div className="w-full max-w-screen-xl mx-auto px-4 flex flex-col sm:flex-col md:flex-col lg:flex-row flex-wrap gap-5 md:gap-4 lg:gap-10 items-center justify-between">
+          <div className="space-y-4 flex-1 h-auto w-full text-gray-800">
             <h2 className="text-3xl md:text-4xl font-bold">{t('aboutTitle')}</h2>
 
             <p className='text-lg'>{t('aboutParagraph1')}</p>
@@ -87,15 +91,15 @@ const HomePage = () => {
             </Link>
           </div>
 
-          <InnerHero
+          <div className='flex-1 h-auto w-full'>
+            <InnerHero
             contentImage={sideImg}
             showContentImage={true}
             title=""
             subtitle=""
           />
+          </div>
         </div>
-
-        
       </section>
 
       <CardCarousel />

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import AdidasLogo from "../../public/assets/brands/sanity.svg";
@@ -9,6 +9,7 @@ import AtlassianLogo from "../../public/assets/brands/zoom.svg";
 import MailchimpLogo from "../../public/assets/brands/wordpress.svg";
 import ShopifyLogo from "../../public/assets/brands/shopify.svg";
 import SpotifyLogo from "../../public/assets/brands/fathom.svg";
+import { useTranslation } from "react-i18next";
 
 const brandImg = [
   AdidasLogo,
@@ -22,8 +23,16 @@ const brandImg = [
 ];
 
 const CardCarousel = () => {
+  const { i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
   const [centerIndex, setCenterIndex] = useState(0);
-  const brandImgs = [...brandImg, ...brandImg]; // duplicate for smooth loop
+
+  // const brandImgs = [...brandImg, ...brandImg]; 
+
+    const brandImgs = useMemo(() => {
+    const imgs = [...brandImg, ...brandImg]; // duplicate for smooth loop
+    return isRTL ? imgs.reverse() : imgs;
+  }, [isRTL]);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -31,6 +40,7 @@ const CardCarousel = () => {
       align: "center",
       skipSnaps: false,
       speed: 4, // smooth speed
+      direction: isRTL ? "rtl" : "ltr",
     },
     [Autoplay({ delay: 2000, stopOnInteraction: false })] // delay 1ms to imitate continuous loop
   );
@@ -87,3 +97,4 @@ const CardCarousel = () => {
 };
 
 export default CardCarousel;
+

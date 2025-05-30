@@ -272,7 +272,7 @@ const Header = () => {
           </NavLink>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-4 items-center justify-center w-full">
+        <nav className="hidden lg:text-base lg:flex xl:flex xxl:flex md:gap-1 lg:gap-2 gap-4 items-center justify-center w-full">
           {menuItems.map((item, index) => (
             <div
               key={index}

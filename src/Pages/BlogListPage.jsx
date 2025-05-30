@@ -74,11 +74,15 @@
 // export default BlogList;
 
 
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Loader from '../Components/Loader';
+import useLoader from '../Hooks/useLoader';
 
 const BlogList = () => {
+  const loading = useLoader(1000);
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 4;
@@ -89,6 +93,10 @@ const BlogList = () => {
       .then(res => res.json())
       .then(data => setPosts(data));
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   const totalPages = Math.ceil(posts.length / postsPerPage);
   const startIndex = (currentPage - 1) * postsPerPage;
@@ -107,7 +115,7 @@ const BlogList = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-16 px-4">
+    <div className="max-w-7xl mx-auto lg:py-16 md:py-8 sm:py-16 px-4">
       <h1 className="text-4xl text-gray-800 font-bold mb-6 text-center">{t('blogList.title')}</h1>
 
       <div className="space-y-6">
@@ -125,38 +133,42 @@ const BlogList = () => {
         ))}
       </div>
 
-      {/* Rounded Pagination */}
-      <div className="flex justify-center items-center gap-2 mt-10 flex-wrap">
-      <button
-          onClick={handlePrev}
-          disabled={currentPage === 1}
-          className="w-10 h-10 flex items-center justify-center rounded-full text-gray-800 bg-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-50 transition-all"
-        >
-          ←
-        </button>
-
-        {Array.from({ length: totalPages }, (_, index) => (
+    
+      {/* Responsive Rounded Pagination */}
+        <div className="w-full flex flex-wrap justify-center items-center gap-2 mb-6 mt-8 sm:mt-8 md:mt-10 lg:mt-12 px-4">
+          {/* Previous Button */}
           <button
-            key={index}
-            onClick={() => handlePageClick(index + 1)}
-            className={`w-10 h-10 flex items-center justify-center font-semibold rounded-full text-lg transition-all ${
-              currentPage === index + 1
-                ? 'bg-gray-800 text-white font-semibold'
-                : 'bg-gray-300 font-semibold text-gray-800 hover:bg-gray-800 hover:text-white hover: transition-all'
-            }`}
+            onClick={handlePrev}
+            disabled={currentPage === 1}
+            className="w-10 h-10 flex items-center justify-center rounded-full text-gray-800 bg-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-50 transition-all"
           >
-            {index + 1}
+            ←
           </button>
-        ))}
 
-        <button
-          onClick={handleNext}
-          disabled={currentPage === totalPages}
-          className="w-10 h-10 flex items-center text-gray-800 justify-center rounded-full transition-all bg-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-50"
-        >
-          →
-        </button>
-      </div>
+          {/* Page Numbers */}
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              onClick={() => handlePageClick(index + 1)}
+              className={`w-10 h-10 flex items-center justify-center rounded-full text-lg font-semibold transition-all ${
+                currentPage === index + 1
+                  ? 'bg-gray-800 text-white'
+                  : 'bg-gray-300 text-gray-800 hover:bg-gray-800 hover:text-white'
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          {/* Next Button */}
+          <button
+            onClick={handleNext}
+            disabled={currentPage === totalPages}
+            className="w-10 h-10 flex items-center justify-center rounded-full text-gray-800 bg-gray-300 hover:bg-gray-800 hover:text-white disabled:opacity-50 transition-all"
+          >
+            →
+          </button>
+        </div>
     </div>
   );
 };
