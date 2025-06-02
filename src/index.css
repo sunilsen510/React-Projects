@@ -25,7 +25,9 @@ a {
 
 html {
   scroll-behavior: smooth;
+  transition: direction 0.3s ease;
 }
+
 body {
   margin: 0;
   /* display: flex; */
@@ -110,4 +112,44 @@ button:focus-visible {
 
 @media screen and (max-width:991px){
   
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
+
+
+
+/* For LTR languages like English */
+.ltr-ticker {
+  animation: scroll-left 20s linear infinite;
+}
+
+/* For RTL languages like Arabic */
+.rtl-ticker {
+  animation: scroll-right 20s linear infinite;
+  direction: rtl;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

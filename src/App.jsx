@@ -26,6 +26,11 @@ function App() {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
+  useEffect(() => {
+    const lang = localStorage.getItem('selectedLanguage') || 'en';
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }, []);
+
   if (loading) return <Loader />; 
 
   return (
