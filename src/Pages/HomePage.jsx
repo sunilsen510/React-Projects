@@ -101,7 +101,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
+     
       <CardCarousel />
       <SwipperSlider slides={[...Array(20).keys()]} options={{ loop: false }} />
     </>

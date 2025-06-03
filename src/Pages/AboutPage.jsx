@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Loader from '../Components/Loader';
 import useLoader from '../Hooks/useLoader';
 import contactImg from '../assets/aboutt.png';
+import PostsList from '../Components/PostsList';
 
 const AboutPage = () => {
   const title = "About Us";
@@ -49,6 +50,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      <PostsList />
     </>
   )
 }
