@@ -74,8 +74,8 @@ const HomePage = () => {
   return (
     <>
       <NewsTicker />
-      <section className="bg-gray-100 py-16">
-       <div className="w-full max-w-screen-xl mx-auto px-4 flex flex-col sm:flex-col md:flex-col lg:flex-row flex-wrap gap-5 md:gap-4 lg:gap-10 items-center justify-between">
+      <section className="bg-gray-100 py-16 xl:px-0 xxl:px-0 lg:px-2 md:px-0 px-2">
+       <div className="w-full max-w-screen-xl mx-auto lg:px-0 md:px-4  flex flex-col sm:flex-col md:flex-col lg:flex-row flex-wrap gap-5 md:gap-10 lg:gap-10 items-center justify-between">
           <div className="space-y-4 flex-1 h-auto w-full text-gray-800">
             <h2 className="text-3xl md:text-4xl font-bold">{t('aboutTitle')}</h2>
 

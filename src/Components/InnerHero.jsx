@@ -142,7 +142,7 @@ const InnerHero = ({
         <div className="absolute inset-0 bg-transparent bg-opacity-50 rounded-xl z-10"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-[100%] flex flex-col md:flex-row items-center justify-center text-center px-4 md:px-0">
+      <div className="relative z-10 w-full max-w-[100%] flex flex-col md:flex-row items-center justify-center text-center px-0 lg:px-0 md:px-0">
         <div className="mb-6 md:mb-0">
           <h1 className={`text-3xl md:text-5xl font-bold mb-4 ${titleColor}`}>
             {t(title)}
