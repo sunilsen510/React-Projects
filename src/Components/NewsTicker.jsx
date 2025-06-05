@@ -460,13 +460,13 @@ const NewsTicker = () => {
         </div>
 
         {/* News Ticker */}
-        <div className="w-full overflow-hidden px-2">
+        <div className="w-full overflow-hidden px-0">
           <Swiper
             modules={[Autoplay]}
             slidesPerView="auto"
             spaceBetween={32}
             loop={true}
-            speed={5000}
+            speed={3000}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,

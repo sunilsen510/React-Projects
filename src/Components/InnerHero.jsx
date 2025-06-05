@@ -121,7 +121,7 @@ const InnerHero = ({
   contentImage = fallbackImage,
   imageAlt = 'Inner Image',
   backgroundImage,
-  height = "h-[60vh]",
+  height = "h-[40vh]",
   titleColor = "text-gray-800",
   subtitleColor = "text-gray-800",
   showContentImage = false,
@@ -134,8 +134,9 @@ const InnerHero = ({
         className={`relative w-full ${height} bg-cover bg-center text-white flex items-center justify-center`}
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
       >
         {/* Overlay */}

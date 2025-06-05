@@ -523,7 +523,7 @@ export default function PostsList() {
         </div>
 
         {/* Pagination */}
-        <div className="w-full flex flex-wrap justify-center items-center gap-2 mb-6 mt-8 sm:mt-8 md:mt-10 lg:mt-12 px-4">
+        <div className="w-full hidden md:flex  lg:flex flex-wrap justify-center items-center gap-2 mb-6 mt-8 sm:mt-8 md:mt-10 lg:mt-12 px-4">
           {/* Previous Button */}
           <button
             onClick={handlePrev}

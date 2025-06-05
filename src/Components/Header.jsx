@@ -266,10 +266,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-transparent py-4">
       <div className="xl:max-w-[80%] md:max-w-full mx-auto relative flex items-center justify-between py-4 px-4 bg-white sm:shadow border-black rounded-2xl">
-        {/* Logo */}
+        <div className="">
+          {/* Logo */}
           <NavLink to={"/"}>
             <img src={logoImg} alt="Logo" className="h-10 w-auto" />
           </NavLink>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:text-base lg:flex xl:flex xxl:flex md:gap-1 lg:gap-2 gap-4 items-center justify-center w-full">
@@ -335,28 +337,29 @@ const Header = () => {
         </nav>
 
         {/* Desktop Icons */}
-        <LangSwitcher />
-        <div className="hidden sm:flex items-center gap-4 text-gray-700 text-xl listshowing">
-          <button
-            className="hover:text-primary transition"
-            onClick={() => setIsModalOpen(true)}
-          >
-            <FiSearch />
-          </button>
-          <SearchModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-          <button className="hover:text-primary transition">
-            <FiUser />
-          </button>
-          <button className="hover:text-primary transition">
-            <FiHeart />
-          </button>
-          <button className="hover:text-primary transition">
-            <FiShoppingBag />
-          </button>
-        </div>
+        <div className="flex gap-2 items-center justify-end">
+          <LangSwitcher />
+          <div className="hidden sm:flex items-center gap-4 text-gray-700 text-xl listshowing">
+            <button
+              className="hover:text-primary transition"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <FiSearch />
+            </button>
+            <SearchModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            <button className="hover:text-primary transition">
+              <FiUser />
+            </button>
+            <button className="hover:text-primary transition">
+              <FiHeart />
+            </button>
+            <button className="hover:text-primary transition">
+              <FiShoppingBag />
+            </button>
+          </div>
 
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden">
+           {/* Mobile Menu Button */}
+        <div className="lg:hidden flex items-center justify-center">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="text-3xl text-gray-700"
@@ -364,6 +367,9 @@ const Header = () => {
             {mobileOpen ? <HiOutlineX /> : <HiOutlineMenu />}
           </button>
         </div>
+        </div>
+
+       
 
         {/* Mobile Menu */}
         {mobileOpen && (
