@@ -1,99 +1,3 @@
-
-// import {useRef, useEffect} from 'react'
-// import logoImg from "../assets/logo.svg";
-// import { FiSearch } from "react-icons/fi";
-
-// const SearchModal = ({ isOpen, onClose }) => {
-//   const modalRef = useRef();
-//   const searchItems = ["standing desk", "office chair", "gaming", "ergonomics"];
-
-//   useEffect(() => {
-//     const handler = (e) => {
-//       if (modalRef.current && !modalRef.current.contains(e.target)) {
-//         onClose();
-//       }
-//     };
-//     if (isOpen) document.addEventListener("mousedown", handler);
-//     return () => document.removeEventListener("mousedown", handler);
-//   }, [isOpen, onClose]);
-
-//   if (!isOpen) return null;
-
-//   return (
-//       <>
-//         <div className="fixed inset-0 z-50 flex flex-col items-center justify-start bg-transparent bg-opacity-50 backdrop-blur-sm px-4 py-8 animate-fade-in space-y-6">
-//           {/* Modal Header */}
-//           <div
-//             ref={modalRef}
-//             className="bg-white max-w-[80%] w-full rounded-2xl shadow-xl p-16 "
-//           >
-//             <div className='flex items-center justify-between space-x-4 mb-6'>
-//               {/* Left: Logo */}
-//             <div className="flex-shrink-0">
-//               <img src={logoImg} alt="Logo" className="h-10 w-auto" />
-//             </div>
-
-//             {/* Center: Search Bar with Icon */}
-//             <div className="flex-grow relative max-w-xl w-full">
-//               {/* Search Icon */}
-//               <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-lg" />
-
-//               {/* Input Field */}
-//               <input
-//                 type="text"
-//                 placeholder="Search"
-//                 className="w-full h-12 pl-10 pr-5 py-2 rounded-full border bg-gray-50 border-gray-300 focus:outline-none"
-//                 autoFocus
-//               />
-//             </div>
-
-
-//             {/* Right: Close Button */}
-//             <div className="flex-shrink-0">
-//               <button
-//                 onClick={onClose}
-//                 className="text-gray-500 hover:text-black text-2xl font-bold focus:outline-none"
-//               >
-//                 &times;
-//               </button>
-//             </div>
-//             </div>
-//             <div className="bg-white rounded-xl w-[25rem] mx-auto p-4">
-//               <span className="block font-semibold text-gray-400 text-base mb-2">Popular Searches</span>
-//               {/* <ul className="flex flex-col text-black">
-//                 <li className="text-[1.125rem] mt-[.625rem] text-xl font-bold hover:text-gray-500 cursor-pointer relative opacity-100 transition-all duration-300 ease-in-out hover:translate-x-2">
-//                   standing desk
-//                 </li>
-//                 <li className="text-[1.125rem] mt-[.625rem] text-xl font-bold hover:text-gray-500 cursor-pointer relative opacity-100 transition-all duration-300 ease-in-out hover:translate-x-2">
-//                   office chair
-//                 </li>
-//                 <li className="text-[1.125rem] mt-[.625rem] text-xl font-bold hover:text-gray-500 cursor-pointer relative opacity-100 transition-all duration-300 ease-in-out hover:translate-x-2">
-//                   gaming
-//                 </li>
-//                 <li className="text-[1.125rem] mt-[.625rem] text-xl font-bold hover:text-gray-500 cursor-pointer relative opacity-100 transition-all duration-300 ease-in-out hover:translate-x-2">
-//                   ergonomics
-//                 </li>
-//               </ul> */}
-//               <ul className="flex flex-col text-black">
-//                 {searchItems.map((item, index) => (
-//                   <li
-//                     key={index}
-//                     className="text-[1.125rem] mt-[.625rem] text-xl font-bold hover:text-gray-500 cursor-pointer relative opacity-100 transition-all duration-300 ease-in-out hover:translate-x-2"
-//                   >
-//                     {item}
-//                   </li>
-//                 ))}
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-//       </>
-//   );
-// };
-
-// export default SearchModal;
-
-
 import { useRef, useEffect, useState } from 'react';
 import logoImg from "../assets/nlogo.svg";
 import { FiSearch } from "react-icons/fi";
@@ -104,7 +8,10 @@ const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
   const [searchValue, setSearchValue] = useState('');
   const [loading, setLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { t } = useTranslation();
+
+  const { t, i18n } = useTranslation();
+
+  const isRTL = i18n.language === 'ar';
 
   const searchItems = [
     "standing desk", "office chair", "gaming", "ergonomics", "sale", "workstations", "monitor arms", "laptop & monitors", "accessories", "tables",
@@ -171,17 +78,25 @@ const SearchModal = ({ isOpen, onClose, isSearchbarOpen }) => {
         <div className="flex items-center justify-between space-x-4 mb-6">
           <img src={logoImg} alt="Logo" className="h-10 w-auto" />
           <div className="flex-grow relative max-w-2xl w-full">
-            <FiSearch className="absolute text-black left-4 top-0 bottom-0 my-auto text-xl" />
+             <FiSearch 
+                className={`absolute text-black left-4 top-0 bottom-0 my-auto text-xl 
+                  ${isRTL ? 'right-4' : 'left-4'}`} 
+              />
             <input
               type='search'
               placeholder='Search'
-              className='w-full h-12 text-base pl-12 pr-12 py-2 rounded-full bg-[#f5f5f5] md:pr-16 outline-none'
+              className={`w-full h-12 text-base pl-12 pr-12 py-2 rounded-full bg-[#f5f5f5] md:pr-16 outline-none
+              ${isRTL ? 'pl-16 pr-12 text-right' : 'pl-12 pr-16 text-left'}`}
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
+              dir={isRTL ? 'rtl' : 'ltr'}
             />
-            {loading && (
-              <span className="absolute right-4 top-0 bottom-0 my-auto h-5 w-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></span>
-            )}
+             {loading && (
+                <span
+                  className={`absolute top-0 bottom-0 my-auto h-5 w-5 border-2 border-gray-800 border-t-transparent rounded-full animate-spin
+                    ${isRTL ? 'left-4' : 'right-4'}`}
+                ></span>
+              )}
           </div>
           <button onClick={onClose} className="text-2xl text-black">
             <svg className="hover:rotate-90 transition-all duration-500 ease-in-out" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">

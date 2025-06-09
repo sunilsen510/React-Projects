@@ -1,7 +1,7 @@
 import React from 'react';
 import { ContactForm } from '../Components/ContactForm';
 import InnerHero from '../Components/InnerHero';
-import contactImg from '../assets/store-slider.png';
+import contactImg from '../assets/blogImg.png';
 import Loader from '../Components/Loader';
 import useLoader from '../Hooks/useLoader';
 

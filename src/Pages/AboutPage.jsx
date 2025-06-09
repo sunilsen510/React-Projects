@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Loader from '../Components/Loader';
 import useLoader from '../Hooks/useLoader';
-import contactImg from '../assets/aboutt.png';
+import contactImg from '../assets/printImg.png';
 import PostsList from '../Components/PostsList';
 import TodoList from '../Components/TodoList';
 
@@ -26,6 +26,8 @@ const AboutPage = () => {
           backgroundImage={contactImg}
           titleColor="text-white"
           subtitleColor="text-white"
+          backgroundSize="cover"
+          backgroundPosition="center"
         />
         <div className="bg-gray-100 py-16 lg:px-4 md:px-0 px-2">
           <div className="w-full max-w-7xl xl:max-w-[80%] lg:max-w-[80%] md:max-w-full mx-auto px-4 lg:px-2 flex flex-col lg:flex-row gap-10 items-center">
